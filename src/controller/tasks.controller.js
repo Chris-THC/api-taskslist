@@ -86,7 +86,7 @@ export const updateTask = async (req, res) => {
   try {
     const [result] = await connection.query(
       "UPDATE task set nameTask = IFNULL(?, nameTask), descriptionTask = IFNULL(?, descriptionTask), isDone = IFNULL(?, isDone) WHERE idTask = ?",
-      [nameTask, descriptionTask, isDone, id]
+      [nameTask, descriptionTask, isDone, id] 
     );
 
     if (result.affectedRows === 0) {
