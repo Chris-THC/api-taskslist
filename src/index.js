@@ -1,10 +1,15 @@
 import express from "express";
+import cors from "cors";
 import taskRoutes from "./routes/tasks.routes.js";
 
 // leer variables de entorno
 import { PORT } from "./config/config.js";
 
 const app = express();
+
+//TODO: ==> (Enable All CORS Requests)
+
+app.use(cors());
 
 // ? Esto hace que los datos se conviertan en json para que el backend lo pueda interpretar
 app.use(express.json());
