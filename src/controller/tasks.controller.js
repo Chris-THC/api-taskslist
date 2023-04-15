@@ -42,7 +42,7 @@ export const createTask = async (req, res) => {
 
   try {
     const [rows] = await connection.query(
-      "INSERT INTO tasklist.task (nameTask, descriptionTask) VALUES (?, ?)",
+      "INSERT INTO task (nameTask, descriptionTask) VALUES (?, ?)",
       [nameTask, descriptionTask]
     );
     res.send({
